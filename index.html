@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+<title>ベトナムの料理</title>
+<script>
+$(function(){
+	$(".humburger").click(function(){
+	$(".humburger").toggleClass("active");
+	if($(".humburger").hasClass("active")){
+	$("ul.menu").addClass("slide");
+	}else{
+	$("ul.menu").removeClass("slide");
+	}
+	});
+	$(".slider").bxSlider({
+	pager:false,
+	controls:false,
+	auto:true,
+	mode:"fade",
+});
+});
+</script>
+<style>
+body{
+margin:0;
+padding:0;
+}
+@media screen and (min-width:1025px){
+header{
+display:flex;
+}
+h1{
+margin:0;
+padding:0 0 0 20px;
+height:48px;
+line-height:48px;
+text-align:center;
+width:30%;
+}
+nav{
+width:70%
+}
+nav{
+width:70%
+}
+ul.menu{
+margin:0;
+padding:0;
+list-style:none;
+display:flex;
+justify-content:flex-end;
+}
+ul.menu li{
+padding:0 20px;
+height:48px;
+line-height:48px;
+}
+
+.slider div{
+width:100%;
+height:400px;
+background-size:cover;
+background-position:center;
+text-indent:-9999px;
+}
+.slider Div:nth-child(1){
+background-image:url(./images/01.jpg);
+}
+
+.slider div:nth-child(2){
+background-image:url(./images/02.jpg);
+}
+.slider div:nth-child(3){
+background-image:url(./images/03.jpg);
+}
+}
+@media screen and (max-width:600px){
+header{
+
+position:relative;
+width:100%;
+overflow:hidden;
+}
+h1{
+margin:0;
+padding:0;
+height:50px;
+line-height:50px;
+text-align:center;
+}
+.humburger{
+position:absolute;
+top:5;
+right:10px;
+width:40px;
+height:40px;
+border:1px solid #000;
+cursor:pointer;
+}
+.humburger span{
+position:absolute;
+left:5px;
+width:30px;
+height:2px;
+background-color:#000;
+transition:2s;
+}
+
+.humburger span:nth-child(1){
+top:10px;
+}
+.humburger span:nth-child(2){
+top:20px;
+}
+.humburger span:nth-child(3){
+top:30px;
+}
+
+.humburger.active span:nth-child(1){
+top:20px;
+transform:rotate(-45deg);
+}
+.humburger.active span:nth-child(2),
+.humburger.active span:nth-child(3){
+top:20px;
+transform:rotate(45deg);
+}
+ul.menu{
+list-style:none;
+position:fixed;
+z-index:100;
+width:100%;
+margin:0;
+padding:0;
+transform:translateX(100%);
+transition:2s;
+}
+
+ul.menu.slide{
+transform:translateX(0%);
+}
+.slider div{
+position:absolute;
+z-index:10;
+}
+
+.slider div{
+opacity:0;
+width:100%;
+height:600px;
+background-size:cover;
+background-position:center;
+text-indent:-9999px;
+}
+.slider Div:nth-child(1){
+background-image:url(./images/01.jpg);
+}
+
+.slider div:nth-child(2){
+background-image:url(./images/02.jpg);
+}
+.slider div:nth-child(3){
+background-image:url(./images/03.jpg);
+}
+
+</style>
+</head>
+<body>
+<header>
+<div class="humburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<h1>ベトナムの料理</h1>
+<nav>
+<ul class="menu">
+<li>com tam</li>
+<li>bun cha</li>
+<li>pho bo</li>
+</ul>
+</nav>
+</header>
+	<div class="slider">
+		<div>com tam</div>
+		<div>bun cha</div>
+		<div>pho bo</div>
+	</div>
+<footer></footer>
+</body>
+</html>
