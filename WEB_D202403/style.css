@@ -1,171 +1,211 @@
-body{
-margin:0;
-padding:0;
-}
-.com{
-background-color:#f5f5f5;
-}
-@media screen and (min-width:1025px){
-header{
-display:flex;
-}
-h1{
-margin:0;
-padding:0 0 0 20px;
-height:48px;
-line-height:48px;
-width:30%
-}
-nav{
-width:70%;
-}
-ul.menu{
-margin:0;
-padding:0;
-list-style:none;
-display:flex;
-justify-content:flex-end;
-}
-ul.menu li{
-padding:0 20px;
-height:48px;
-line-height:48px;
-}
-.slider div{
-width:100%;
-height:400px;
-background-size:cover;
-background-position:center;
-text-indent:-9999px;
-}
-.slider div:nth-child(1){
-background-image:url(./images/02.jpg);
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.slider div:nth-child(2){
-background-image:url(./images/03.jpg);
+.com {
+    background-color: #f5f5f5;
 }
 
-.slider div:nth-child(3){
-background-image:url(./images/01.jpg);
-}
+@media screen and (min-width:1025px) {
+    header {
+        display: flex;
+    }
 
-.box01{
-margin:40px 20px;
-background-image:url(./images/04.jpg);
-background-size:cover;
-height:300px;
-box-shadow:0 0 10px #808080;
-border-radius:0.5em;
+    h1 {
+        margin: 0;
+        padding: 0 0 0 20px;
+        height: 48px;
+        line-height: 48px;
+        width: 30%
+    }
 
-}
+    nav {
+        width: 70%;
+    }
 
-.fadein{
-opacity:0;
-transform:translate(0,50px);
-transition: all 2s;
-}
+    ul.menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+    }
 
-.fadein.active{
-opacity:1;
-transform: translate(0,0);
-}
+    ul.menu li {
+        padding: 0 20px;
+        height: 48px;
+        line-height: 48px;
+        background-size: cover;
+    }
 
-dl.info{
-}
-dl.info li{
-heigh:40px;
-line-height:40px;
-list-style:none;
-border-bottom:1px solid#1e90ff;
-}
-}
+    ul.col-sm-12 {
+        list-style: none;
+    }
 
-@media screen and (max-width:600px){
-header{
-position:relative;
-width:100%;
-overflow:hidden;
-}
-h1{
-margin:0;
-padding:0;
-height:50px;
-line-height:50px;
-text-align:center;
-}
-.humburger{
-position:absolute;
-top:5px;
-right:10px;
-width:40px;
-height:40px;
-border:1px solid #000;
-cursor:pointer;
-}
-.humburger span{
-position:absolute;
-left:5px;
-width:30px;
-height:2px;
-background-color:#000;
-transition:1s;
-}
+    .slider div {
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        text-indent: -9999px;
+        background-size: cover;
+    }
 
-.humburger span:nth-child(1){
-top:10px;
-}
-.humburger span:nth-child(2){
-top:20px;
-}
-.humburger span:nth-child(3){
-top:30px;
-}
+    .slider div:nth-child(1) {
+        background-image: url(./images/02.jpg);
+        background-size: cover;
+    }
 
-.humburger.active span:nth-child(1){
-top:20px;
-transform:rotate(-45deg);
-}
-.humburger.active span:nth-child(2),
-.humburger.active span:nth-child(3){
-top:20px;
-transform:rotate(45deg);
-}
+    .slider div:nth-child(2) {
+        background-image: url(./images/03.jpg);
+    }
 
-ul.menu{
-list-style:none;
-position:fixed;
-z-index:100;
-width:100%;
-margin:0;
-padding:0;
-transform:translateX(100%);
-transition:2s;
-}
+    .slider div:nth-child(3) {
+        background-image: url(./images/01.jpg);
+    }
 
-ul.menu.slide{
-transform:translateX(0%);
-}
-.slider{
-position:absolute;
-z-index:10;
-}
-.slider div{
-width:100%;
-height:500px;
-}
-.slider div:nth-child(1){
-background-image:url(./images/02.jpg);
-}
+    .box01 {
+        margin: 40px 20px;
+        background-image: url(./images/04.jpg);
+        background-size: cover;
+        height: 300px;
+        box-shadow: 0 0 10px #808080;
+        border-radius: 0.5em;
 
-.slider div:nth-child(2){
-background-image:url(./images/03.jpg);
-}
+    }
 
-.slider div:nth-child(3){
-background-image:url(./images/01.jpg);
-}
+    .fadein {
+        opacity: 0;
+        transform: translate(0, 50px);
+        transition: all 2s;
+    }
 
-}
+    .fadein.active {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 
 
+    dl.info li {
+        height: 40px;
+        line-height: 40px;
+        list-style: none;
+        border-bottom: 1px solid#1e90ff;
+    }
+}
+
+@media screen and (max-width:600px) {
+    header {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .humburger {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #000;
+        cursor: pointer;
+    }
+
+    .humburger span {
+        position: absolute;
+        left: 5px;
+        width: 30px;
+        height: 2px;
+        background-color: #000;
+        transition: 1s;
+    }
+
+    .humburger span:nth-child(1) {
+        top: 10px;
+    }
+
+    .humburger span:nth-child(2) {
+        top: 20px;
+    }
+
+    .humburger span:nth-child(3) {
+        top: 30px;
+    }
+
+    .humburger.active span:nth-child(1) {
+        top: 20px;
+        transform: rotate(-45deg);
+    }
+
+    .humburger.active span:nth-child(2),
+    .humburger.active span:nth-child(3) {
+        top: 20px;
+        transform: rotate(45deg);
+    }
+
+    ul.menu {
+        list-style: none;
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        transform: translateX(100%);
+        transition: 2s;
+    }
+
+    .col-sm-12 {
+        display: inline-block; /* Để gạch chân có thể kéo dài */
+        text-decoration: none; /* Bỏ gạch chân mặc định */
+        position: relative; /* Để định vị giả */
+    }
+
+    .col-sm-12::after {
+        content: ""; /* Tạo một phần tử giả */
+        position: absolute; /* Định vị nó */
+        left: 0; /* Bắt đầu từ bên trái */
+        right: 0; /* Kéo dài đến bên phải */
+        bottom: 0; /* Đặt ở đáy */
+        height: 2px; /* Độ dày của gạch chân */
+        background-color: blue; /* Màu xanh cho gạch chân */
+        z-index: -1; /* Đặt sau chữ */
+    }
+
+    ul.menu.slide {
+        transform: translateX(0%);
+    }
+
+    .slider {
+        position: absolute;
+        z-index: 10;
+    }
+
+    .slider div {
+        width: 100%;
+        height: 500px;
+    }
+
+    .slider div:nth-child(1) {
+        background-image: url(./images/02.jpg);
+    }
+
+    .slider div:nth-child(2) {
+        background-image: url(./images/03.jpg);
+    }
+
+    .slider div:nth-child(3) {
+        background-image: url(./images/01.jpg);
+    }
+    h2 {
+        text-align: center;
+    }
+}
